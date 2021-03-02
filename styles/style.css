@@ -9,19 +9,8 @@
   font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
-html, body, div, span, applet, object, iframe,
-  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-  a, abbr, acronym, address, big, cite, code,
-  del, dfn, em, img, ins, kbd, q, s, samp,
-  small, strike, strong, sub, sup, tt, var,
-  b, u, i, center,
-  dl, dt, dd, ol, ul, li,
-  fieldset, form, label, legend,
-  table, caption, tbody, tfoot, thead, tr, th, td,
-  article, aside, canvas, details, embed,
-  figure, figcaption, footer, header, hgroup,
-  menu, nav, output, ruby, section, summary,
-  time, mark, audio, video {
+  h1, h2, h3, h4, h5, h6, p, img, footer, header,
+  section, ul, li, main, div, nav {
  margin: 0;
  padding: 0;
 }
@@ -38,7 +27,7 @@ html, body, div, span, applet, object, iframe,
   /* выше установили ограничения для секции */
 }
 
-.logo__place-header {
+.logo_place_header {
   position: absolute;
   width: 183px;
   height: 32px;
@@ -70,6 +59,7 @@ html, body, div, span, applet, object, iframe,
 
 .header__link {
   color: #2f80ed;
+  text-decoration: none;
 }
 
 .header__main-illustration {
@@ -101,8 +91,6 @@ html, body, div, span, applet, object, iframe,
   margin-top: 100px;
 }
 
-
-
 .two-columns {
   display: flex;
   margin: 0;
@@ -131,7 +119,7 @@ html, body, div, span, applet, object, iframe,
 .two-columns__paragraph:not(:last-child) {
   margin-bottom: 30px;
 }
-.span-accent {
+.two-columns__span-accent {
   line-height: 34px;
   font-size: 24px;
   font-weight: bold;
@@ -195,16 +183,17 @@ html, body, div, span, applet, object, iframe,
   text-align: left;
 }
 
-.table__text-bank {
+.table__text:last-of-type {
   margin-bottom: 0;
 }
+
 
 .feynman {
   position: relative;
   display: flex;
   flex-direction: column;
   text-align: center;
-  height: 790px;
+  min-height: 790px;
   background-color: #f2f2f2;
   background-image: url(../images/feynman.png);
   background-position: left bottom;
@@ -232,12 +221,13 @@ html, body, div, span, applet, object, iframe,
 
 .feynman__link {
   position: absolute;
-  justify-content: center;
   line-height: 51px;
   font-size: 36px;
   font-weight: normal;
   top: 50%;
   right: 48px;
+  text-decoration: none;
+  color: #2f80ed;
 }
 
 .kaufman {
@@ -245,14 +235,14 @@ html, body, div, span, applet, object, iframe,
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: black;
+  background-color:#1f1f1f;
   color: #f2f2f2;
   overflow: hidden;
 
 }
 
 /* и элемента с модификатором вида ключ-значение */
-.table__cell-theme-dark {
+.table__cell_theme_dark {
   width: 200px;
   color: white;
   margin-right: 0;
@@ -260,15 +250,15 @@ html, body, div, span, applet, object, iframe,
   z-index: 1;
 }
 
-.section-title-theme-dark {
+.section-title_theme_dark {
   margin-top: 90px;
 }
 
-.table-theme-dark {
+.table_theme_dark {
   margin-bottom: 90px;
 }
 
-.table__heading-theme-dark {
+.table__heading_theme_dark {
   margin-top: 0;
 }
 
@@ -282,14 +272,16 @@ html, body, div, span, applet, object, iframe,
   background-image: url(../images/kaufman-triangle.svg);
   background-repeat: no-repeat;
   background-position: top right;
+  background-size: cover;
 }
 
 .footer {
   display: flex;
   min-height: 350px;
-  background-color: black;
+  background-color:#1f1f1f;
   padding-top: 60px;
   padding-bottom: 40px;
+  box-sizing: border-box;
 }
 
 .footer__columns {
@@ -299,14 +291,14 @@ html, body, div, span, applet, object, iframe,
   margin: 0 auto;
 }
 
-.footer__column-content-copyright {
+.footer__column_content_copyright {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   flex-basis: 711px;
 }
 
-.logo__place-footer {
+.logo_place_footer {
   width: 183px;
   height: 35px;
 }
@@ -319,7 +311,7 @@ html, body, div, span, applet, object, iframe,
   margin: 18px 0;
 }
 
-.footer__column-content-info {
+.footer__column_content_info {
   color: #f2f2f2;
   display: flex;
   flex-direction: column;
@@ -345,6 +337,7 @@ html, body, div, span, applet, object, iframe,
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  list-style-type: none;
 
 }
 
@@ -354,9 +347,10 @@ html, body, div, span, applet, object, iframe,
   line-height: 30px;
   font-size: 18px;
   font-weight: normal;
+  list-style-type: none;
 }
 
-.footer__column-content-social{
+.footer__column_content_social{
   color: #f2f2f2;
   list-style-type: none;
   display: flex;
