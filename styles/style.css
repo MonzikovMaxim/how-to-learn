@@ -196,6 +196,7 @@
   min-height: 790px;
   background-color: #f2f2f2;
   background-image: url(../images/feynman.png);
+  background-size: 867px 637px;
   background-position: left bottom;
   background-repeat: no-repeat;
 }
@@ -337,7 +338,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  list-style-type: none;
 
 }
 
